@@ -1,9 +1,10 @@
 const express = require('express');
 require('dotenv').config(); // Load environment variables
+var cors = require('cors')
 const app = express();
 const port = process.env.PORT;
 const mongoose = require('mongoose');
-
+app.use(cors())
 const userRoutes = require('./routes/Api');  // Import routes
 const empRoutes = require('./routes/empapi');  // Import routes
 const locationRoutes = require('./routes/locationapi');  // Import routes
